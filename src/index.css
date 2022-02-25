@@ -1,13 +1,81 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .icon {
+        @apply text-xl text-zinc-600 ease-in duration-200;
+    }
+    .nav-link {
+        @apply text-base border-b border-gray-100 block text-center py-3 uppercase ease-in
+        duration-100 transition-all;
+    }
+    .nav-link-hover {
+        @apply text-teal-400 bg-gray-100 underline;
+    }
+    .nav-link-hover-no-bg {
+        @apply text-teal-400  underline;
+    }
+    .banner-img {
+        @apply opacity-0 invisible group-hover:opacity-100 group-hover:visible absolute 
+        top-0 left-0 w-full h-full bg-gray-800/30 transition-all ease-in-out duration-300;
+    }
+    .text-orange {
+        @apply text-orange-400 text-base font-medium;
+    }
+    .text-small {
+        @apply text-xs normal-case font-bold text-white hover:underline decoration-sky-400;
+    }
+    .text-normal {
+        @apply font-medium text-sm uppercase text-white;
+    }
+    .transition-nav {
+        @apply transition-all ease-linear duration-300;
+    }
+    .after-nav {
+        @apply after:content-['/'] after:mx-3 after:text-gray-400;
+    }
+    .after-nav-line {
+        @apply after:content-['|'] after:mx-3 after:text-gray-400;
+    }
+    .hover-border-red {
+        @apply border border-solid border-red-500;
+    }
+    .nav-table {
+        @apply px-10 py-3 text-base text-gray-500 hover:text-cyan-500;
+    }
+    .nav-table-active {
+        @apply px-10 py-3 text-lg text-gray-500 border border-solid border-b-white rounded-t-md mb-[-1px];
+    }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer utilities {
+    .pos-center {
+        position: absolute;
+        right: 50%;
+        transform: translate(50%, 50%);
+    }
+    .abs-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.slick-next:before,
+.slick-prev:before {
+    color: inherit !important;
+    font-size: inherit !important;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+body {
+    overflow-x: hidden !important;
+}
+.App {
+    overflow-x: hidden;
 }
