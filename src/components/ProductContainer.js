@@ -9,7 +9,7 @@ function ProductContainer(props) {
         <div className="lg:col-span-8 col-span-12 lg:pl-10 lg:pr-5 ">
             <NavLinkTop />
             <ProudctItemPage />
-            <ProductSameCategory />
+            {/* <ProductSameCategory /> */}
             <Footer />
         </div>
     );

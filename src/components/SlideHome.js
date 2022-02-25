@@ -1,8 +1,9 @@
-
+import { useSelector } from 'react-redux';
 import Slider from 'react-slick';
 import ProductItem from './ProductItem';
 
 function SlideHome(props) {
+    const { dataProducts } = useSelector(state => state.totoshop);
     const settings = {
         slidesToShow: 4,
         rows: 1,
@@ -28,14 +29,10 @@ function SlideHome(props) {
         <div className="mt-8">
             <div className="mt-10 lg:px-0 px-1">
                 <Slider {...settings}>
-                    <ProductItem />
-                    <ProductItem />
-                    <ProductItem />
-                    <ProductItem />
-                    <ProductItem />
-                    <ProductItem />
-                    <ProductItem />
-                    <ProductItem />
+                    {
+                        dataProducts &&
+                        dataProducts.map((item, index) => <ProductItem key={index} data={item} />)
+                    }
                 </Slider>
             </div>
         </div>

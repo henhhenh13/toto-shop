@@ -1,14 +1,18 @@
 import HomePage from "./pages/HomePage";
-import TestHtml from "./pages/TestHtml";
 import ProductPage from "./pages/ProductPage";
+import CategoryPage from "./pages/CategoryPage";
+import { Route, Routes } from "react-router-dom";
 
 
 function App() {
   return (
     <div className="App">
-      {/* <HomePage /> */}
-      <TestHtml />
-      {/* <ProductPage /> */}
+      <Routes>
+        <Route path="/product:id" element={<ProductPage />} />
+        <Route path="/category-page" element={<CategoryPage />} />
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+
     </div>
   );
 }

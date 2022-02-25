@@ -8,14 +8,15 @@ import {
     FaSearch,
     FaShoppingBag
 } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function NavDesktop(props) {
     return (
         <div className="lg:col-span-2 lg:block hidden h-screen relative bg-white" >
             <div className="fixed top-0 left-0">
-                <div className="my-12 mx-14">
+                <Link to="/" className="my-12 mx-14 block">
                     <img src={logo} alt="logo" className="h-[110px] w-[180px]" />
-                </div>
+                </Link>
                 <ul className="flex justify-around mx-16 mt-20">
                     <li>
                         <a href="/" className="icon hover:text-sky-300"><FaRegUserCircle /></a>
@@ -33,34 +34,34 @@ function NavDesktop(props) {
                 <div className="mt-10">
                     <ul className="overflow-auto h-[330px]">
                         <li>
-                            <a href="/" className="nav-link hover:nav-link-hover">new arrivals</a>
+                            <Link to="/category-page" className="nav-link hover:nav-link-hover">new arrivals</Link>
                         </li>
                         <li>
-                            <a href="/" className="nav-link hover:nav-link-hover">đồ nam</a>
+                            <Link to="/category-page" className="nav-link hover:nav-link-hover">đồ nam</Link>
                         </li>
                         <li>
-                            <a href="/" className="nav-link hover:nav-link-hover">đồ nữ</a>
+                            <Link to="/category-page" className="nav-link hover:nav-link-hover">đồ nữ</Link>
                         </li>
                         <li>
-                            <a href="/" className="nav-link hover:nav-link-hover">đồ đôi</a>
+                            <Link to="/category-page" className="nav-link hover:nav-link-hover">đồ đôi</Link>
                         </li>
                         <li>
-                            <a href="/" className="nav-link hover:nav-link-hover">áo khoác</a>
+                            <Link to="/category-page" className="nav-link hover:nav-link-hover">áo khoác</Link>
                         </li>
                         <li>
-                            <a href="/" className="nav-link hover:nav-link-hover">phụ kiện</a>
+                            <Link to="/category-page" className="nav-link hover:nav-link-hover">phụ kiện</Link>
                         </li>
                         <li>
-                            <a href="/" className="nav-link hover:nav-link-hover">Săn sale</a>
+                            <Link to="/category-page" className="nav-link hover:nav-link-hover">Săn sale</Link>
                         </li>
                         <li>
-                            <a href="/" className="nav-link hover:nav-link-hover">Tết sale hết</a>
+                            <Link to="/category-page" className="nav-link hover:nav-link-hover">Tết sale hết</Link>
                         </li>
                         <li>
-                            <a href="/" className="nav-link hover:nav-link-hover">chính sách</a>
+                            <Link to="/category-page" className="nav-link hover:nav-link-hover">chính sách</Link>
                         </li>
                         <li>
-                            <a href="/" className="nav-link hover:nav-link-hover">toto fanzone</a>
+                            <Link to="/category-page" className="nav-link hover:nav-link-hover">toto fanzone</Link>
                         </li>
                     </ul>
                 </div>
